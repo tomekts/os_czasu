@@ -21,8 +21,8 @@ const Main = () => {
                     Date.map((item, index) =>(
                         <>
                         <div id={index} 
-                        onMouseLeave={()=> {console.log(document.getElementById(item.nazwa).classList.add('Hide')); }}
-                        onMouseOut={()=> {console.log(document.getElementById(item.nazwa).classList.remove('Hide')); }} 
+                        onMouseLeave={()=> document.getElementById(item.nazwa).classList.add('Hide') }
+                        onMouseOut={()=> document.getElementById(item.nazwa).classList.remove('Hide') } 
                         key={index} className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
                         style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  >                    
                             {/* {parseInt(item.data.substring(0,2))}  */}
