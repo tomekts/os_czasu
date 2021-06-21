@@ -20,12 +20,16 @@ const Main = () => {
                 {Date? 
                     Date.map((item, index) =>(
                         <>
-                        <div id={index} onMouseEnter={()=> {console.log(document.getElementById(index)); }} key={index} className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  >                    
+                        <div id={index} 
+                        onMouseLeave={()=> {console.log(document.getElementById(item.nazwa).classList.add('Hide')); }}
+                        onMouseOut={()=> {console.log(document.getElementById(item.nazwa).classList.remove('Hide')); }} 
+                        key={index} className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
+                        style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  >                    
                             {/* {parseInt(item.data.substring(0,2))}  */}
                             <img src={item.ikona} alt="logo"></img><br></br> 
                                                 
                         </div>
-                        <div className={'Opis'} style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'150px':''}}> 
+                        <div id={item.nazwa} className={'Opis Hide'} style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'150px':''}}> 
                                 {item.data}
                                 <hr width='80%'></hr>
                                 {item.nazwa}
