@@ -7,8 +7,8 @@ var isIE = /*@cc_on!@*/false || !!document.documentMode;
 
 
 const Main = () => {   
-    const today=10;
-    const [Date,] = useState(db)
+    const today=10; // aktualny dzien
+    const [Date,] = useState(db) // pobieranie danych z pliku
     
 
 
@@ -20,17 +20,21 @@ const Main = () => {
                 {Date? 
                     Date.map((item, index) =>(
                         <div key={index} className={'Mobile'} >
-                        <div 
-                        id={index}                                              
-                        onMouseLeave={()=> document.getElementById(item.nazwa).classList.add('Hide') }
-                        onMouseOut={()=> document.getElementById(item.nazwa).classList.remove('Hide') } 
-                        className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
-                        style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  
-                        >                    
-                            <img src={item.ikona} alt="logo"></img><br></br> 
-                                                
-                        </div>
-                            <div id={item.nazwa} className={'Opis Hide'} style={{left: parseInt(item.data.substring(0,2))*2.9+"%", top: isIE?'150px':''}}> 
+                            <div 
+                                id={index}                                              
+                                onMouseLeave={()=> document.getElementById(item.nazwa).classList.add('Hide') }
+                                onMouseOut={()=> document.getElementById(item.nazwa).classList.remove('Hide') } 
+                                className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
+                                style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  
+                            >                    
+                                <img src={item.ikona} alt="logo"></img><br></br> 
+                                                    
+                            </div>
+
+                            <div 
+                                id={item.nazwa} className={'Opis Hide'} 
+                                style={{left: parseInt(item.data.substring(0,2))*2.9+"%", top: isIE?'150px':''}}
+                            > 
                                 {item.data}<br></br>
                                 <hr width='80%'></hr>
                                 {item.nazwa}
@@ -38,7 +42,7 @@ const Main = () => {
                         </div>
                     )) 
                 :
-                    'brak danych'
+                    <div className={'Error'}>Błąd pobrania danych</div>
                 }
                 <div className={'Progres'} style={{width: today*3+'%', top: isIE?'205px':''}  }></div>                
              
