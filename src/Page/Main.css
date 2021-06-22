@@ -1,6 +1,6 @@
 img{
     width: 20px;
-    filter: invert(100%);    
+    /* filter: invert(100%);     fotki zmienione dla ie */
 }
 
 @media screen and (min-width:959px) {
@@ -10,9 +10,6 @@ img{
         display: flex;    
         align-items: center;   
         transition: ease 1s;
-       
-        /* justify-content: flex-start; */
-        
     }
         
     .Bar{   
@@ -40,17 +37,13 @@ img{
         transition: ease 1s;     
     }
     
-    .Icon :hover{    
-        /* background-color: #078ecf;     */    
-        /* border: 4px solid #26437e; */
-        /* border-radius: 50%; */
+    .Icon :hover{   
         height: 30px;
         width: 30px;
         line-height: 40px;
         transition: ease 0.75s;
         cursor: pointer;
         z-index: 0;
-        
     }
     
     .Icon2{
@@ -71,9 +64,6 @@ img{
         z-index: 1;     
         background-color: #078ecf;
         background-image: linear-gradient(#078ecf, #078ccf91);
-        
-        
-           
     }
     
     .Opis{
@@ -84,7 +74,6 @@ img{
         font-size: 12px;
         top: 120px; 
         transition: ease 1s;
-           
     }
     .Hide{
         display: none;
@@ -95,7 +84,6 @@ img{
 @media screen and (max-width:959px) { 
    .Bar{
        display: none;
-       
    }
 
    .Icon{
@@ -114,18 +102,18 @@ img{
     display: inline-block;
     background-color: burlywood;
     height: 72px;
-    width: 72px;
-    line-height: 110px; 
+    width: 72px;    
     background-color: #078ecf;
     background-image: linear-gradient(#3c6dcf, #26437e38);
     border-radius: 50%;      
     border: 4px solid #26437e;
     transition: ease 1s;
-}
+    }
 
    img{
-       width: 50px;
+       width: 45px;
    }
+   
    .Opis{
        display: inline-block;
        margin: 10px;
