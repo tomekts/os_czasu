@@ -78,7 +78,7 @@ img{
 
     .Opis:after {
         top: 100%;
-        left: 40%;
+        left: 10%;
         border: solid transparent;
         content: "";
         height: 150;
