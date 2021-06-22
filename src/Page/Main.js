@@ -19,22 +19,23 @@ const Main = () => {
             <div className={'Bar'} ></div>               
                 {Date? 
                     Date.map((item, index) =>(
-                        <>
-                        <div id={index} 
+                        <div key={index} className={'Mobile'} >
+                        <div 
+                        id={index}                                              
                         onMouseLeave={()=> document.getElementById(item.nazwa).classList.add('Hide') }
                         onMouseOut={()=> document.getElementById(item.nazwa).classList.remove('Hide') } 
-                        key={index} className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
-                        style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  >                    
-                            {/* {parseInt(item.data.substring(0,2))}  */}
+                        className={`Icon ${parseInt(item.data.substring(0,2))<=today?'Icon2':''} `} 
+                        style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'210px':''}}  
+                        >                    
                             <img src={item.ikona} alt="logo"></img><br></br> 
                                                 
                         </div>
-                        <div id={item.nazwa} className={'Opis Hide'} style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'150px':''}}> 
-                                {item.data}
+                            <div id={item.nazwa} className={'Opis Hide'} style={{left: parseInt(item.data.substring(0,2))*2.9+"%", top: isIE?'150px':''}}> 
+                                {item.data}<br></br>
                                 <hr width='80%'></hr>
                                 {item.nazwa}
                             </div>  
-                        </>
+                        </div>
                     )) 
                 :
                     'brak danych'
