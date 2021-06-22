@@ -67,16 +67,29 @@ img{
     }
     
     .Opis{
-        position: absolute;
+        position: absolute;        
         width: 100px;
-        border: 2px solid #078ecf;; 
+        border: 2px solid #078ecf;         
         background: linear-gradient(white, rgb(231, 231, 231));  
         font-size: 12px;
         top: 120px; 
-        transition: ease 1s;
+        transition: ease 1s;        
+    }
+
+    .Opis:after {
+        top: 100%;
+        left: 40%;
+        border: solid transparent;
+        content: "";
+        height: 150;
+        width: 50;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: #88b7d5;
+        border-width: 10px;    
     }
     .Hide{
-        display: none;
+        display: static;
     }
     .Error{
         position: absolute;        
