@@ -33,7 +33,7 @@ const Main = () => {
 
                             <div 
                                 id={item.nazwa} className={'Opis Hide'} 
-                                style={{left: parseInt(item.data.substring(0,2))*3-2+"%", top: isIE?'150px':''}}
+                                style={{left: parseInt(item.data.substring(0,2))*3+"%", top: isIE?'150px':''}}
                             > 
                                 {item.data}<br></br>
                                 <hr width='80%'></hr>
