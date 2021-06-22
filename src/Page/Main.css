@@ -89,7 +89,7 @@ img{
         border-width: 10px;    
     }
     .Hide{
-        display: static;
+        display: none;
     }
     .Error{
         position: absolute;        
