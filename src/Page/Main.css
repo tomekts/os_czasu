@@ -3,6 +3,13 @@ img{
     /* filter: invert(100%);     fotki zmienione dla ie */
 }
 
+.Bar{      
+    width: 0%;     
+} 
+.Progres{
+    width: 0%;
+}
+
 @media screen and (min-width:959px) {
     .Main{
         height: 100%;
@@ -13,6 +20,7 @@ img{
     }
         
     .Bar{   
+        display: block;
         margin: 20px;  
         height: 20px; 
         width: 90%;  
@@ -21,7 +29,7 @@ img{
         background-image: linear-gradient(#26437e, #26437ee0);
         border-radius: 4px; 
         z-index: 0;
-        transition: ease 1s;
+        transition: ease 1.5s;
     } 
     
     .Icon {     
@@ -64,6 +72,7 @@ img{
         z-index: 1;     
         background-color: #078ecf;
         background-image: linear-gradient(#078ecf, #078ccf91);
+        transition: ease 2s;
     }
     
     .Opis{
@@ -103,9 +112,6 @@ img{
 }
 
 @media screen and (max-width:959px) { 
-   .Bar{
-       display: none;
-   }
 
    .Icon{
        display: inline-block;
